@@ -1,0 +1,26 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: user-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+  rabbitmq:
+      host: 192.168.1.20
+      port: 5672
+      username: gimc
+      password: gimc2019
+  profiles:
+    active: peer1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
